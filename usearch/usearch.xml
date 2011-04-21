@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<network>
+		<server>localhost</server>
+		<database>SESSIONS</database>
+		<username>uservice</username>
+		<password>uservice</password>
+	</network>
+	<window>
+		<height>400</height>
+		<width>600</width>
+	</window>
+	<columns>
+		<column index="0">118</column>
+		<column index="1">118</column>
+		<column index="2">118</column>
+		<column index="3">118</column>
+		<column index="4">112</column>
+	</columns>
+	<commands>
+		<command execute="C:\Program Files\DameWare Development\DameWare NT Utilities\dwrcc.exe -c: -h: -m:%compname%">DameWare</command>
+		<command execute="explorer \\%compname%\">View Share</command>
+		<command execute="rundll32 url.dll,FileProtocolHandler mailto:%email%">Send E-mail</command>
+		<command execute="cmd /k net user %username% /domain">Net User</command>
+		<command execute="cmd /k ping %compname%">Ping</command>
+	</commands>
+</configuration>
