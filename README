@@ -1,0 +1,27 @@
+Username Service v0.4
+(c) Renaissance Insurance, 2011
+
+Allows you to quickly find the computer name for which is currently running user Active Directory.
+
+*** Components ***
+
+1. Database Firebird.
+The information base contains all the necessary information about users and computers. 
+
+2. Autoloader UService.
+Console application records information about the current user in the database. Used as the logon/logoff script with the appropriate startup parameters: 
+ON - user is logged in 
+OFF - user logged out 
+PRINT - display information about the current user 
+
+3. Client USearch.
+Application with which you are searching for information about users and computers on the network. 
+
+*** Installation ***
+
+1. Install the server Firebird 2.5 
+2. Place the files configure.bat and sessions.sql in folder bin (C:\...\Firebird\bin), then run the batch file configure.bat 
+3. As a logon-script use uservice.exe file with the parameter on 
+4. As a logoff-script use uservice.exe file with the parameter off 
+5. In the configuration file uservice.ini change the localhost address to the address of the server where Firebird is installed 
+6. Unzip usearch.zip on your computer and replace the localhost address in the file usearch.xml on the server address to set Firebird 
